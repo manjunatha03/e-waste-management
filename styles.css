@@ -1,0 +1,24 @@
+body {
+  background:white ;
+}
+
+table {
+  margin-top: 80px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  background-color:beige;
+    width: 100%;
+
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+      padding-top: 40px;
+
+}
+
+tr:nth-child(even) {
+    background-color:beige ;
+}

@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PC Disposal</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,500|Barlow+Condensed:400,500|Barlow+Semi+Condensed:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="color.processed.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+<style>
+    body {
+      font-family: 'Barlow', sans-serif;
+      background-image: linear-gradient(to right,rgb(0, 253, 148), rgba(34, 136, 9, 0.836));
+    
+    }
+    
+    
+
+    .navbar {
+      background-color: rgba(255, 255, 255, 1) !important;
+      border-bottom: 3px solid #ed7600;
+    }
+  </style>
+</head>
+ 
+  <body id="scrollTop">
+   
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+    
+      <!-- Hero head: will stick at the top -->
+      
+              <a href="index1.php" class="navbar-item purple is-size-3">
+                <strong>E_PARISARAA</strong>
+              </a>
+              
+            </div>
+            
+                <a href="laptop.html" class="navbar-item">LAPTOP</a>
+                <a href="mobile.html" class="navbar-item">MOBILE</a>
+                <a href="camera.html" class="navbar-item">CAMERA</a>
+                <a href="keyboard.html" class="navbar-item">KEYBOARD</a>
+                <a href="pc.html" class="navbar-item">PC</a>
+                <a href="other.html" class="navbar-item">OTHER</a>
+               
+
+            </div>
+            <div class="navbar-end">
+              <a href="schedule.php" class="navbar-item orange">schedule appointment </a> 
+                
+              </div>
+
+            </nav>
+          </div>
+   
+            
+        
+      
+    
+  <section id="laptop" class="hero is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <div data-aos="fade-right"><i class="fa fa-desktop fa-5x"></i></div>
+          <br>
+        <h1 class="title red is-spaced is-size-2">
+          PC Disposal
+        </h1>
+        <h2 class="subtitle">
+          Enter the details below pertaining to your PC.
+        </h2>
+        <br>
+        <div class="container">
+
+    <form class="well form-horizontal" action="insertpc.php" method="post"  id="">
+<fieldset>
+
+<!-- Form Name -->
+<legend></legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">EMAIL</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+  <input name="email" placeholder="enter your email" class="form-control" type="text" required>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label">COMPANY NAME</label>  
+  <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="p_companyname" class="form-control selectpicker" required>
+      <option value=" " ></option>
+      <option>Dell</option>
+      <option>Apple</option>
+      <option>HP</option>
+      <option>Asus</option>
+      <option>Acer</option>
+      <option>Lenovo</option>
+      <option>Sony</option>
+      <option>Alienware</option>
+      <option>Samsung</option>
+      <option>Toshiba</option>
+      <option>IBM</option>
+      <option>Panasonic</option>
+      <option>Gateway</option>
+      <option>Intel</option>
+      <option>Compag</option>
+      <option>Microsoft</option>
+      <option>Google</option>
+      <option>Corsair</option>
+      <option>MSI</option>
+
+      </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >SPEED(in GHz)</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+  <input name="p_speed" placeholder="enter speed(eg. 35GHz)" class="form-control"  type="text" required>
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">HD(in p)</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+  <input name="p_hd" placeholder="enter hd(eg. 720p)" class="form-control" type="text" required>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">SCREEN SIZE(in inches)</label>  
+  <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="p_screensize" class="form-control selectpicker" required>
+      <option value=" " ></option>
+      <option>14"</option>
+      <option>15"</option>
+      <option>17"</option>
+      
+      </select>
+  </div>
+</div>
+</div>  
+
+
+<!-- Text input-->
+ <div class="form-group">
+  <label class="col-md-4 control-label">RAM(in GB)</label>  
+  <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="p_ram" class="form-control selectpicker" required>
+      <option value=" " ></option>
+      <option>2GB</option>
+      <option>4GB</option>
+      <option>8GB</option>
+      <option>16GB</option>
+      </select>
+  </div>
+</div>
+</div>  
+
+
+
+
+
+
+<!-- radio checks -->
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Does the pc work?</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="p_work" value="yes" required> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="p_work" value="no" required> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">OTHER SPECIFICATIONS</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
+          <textarea class="form-control" name="p_specs" placeholder="Specify here.."></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<!--<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
+
+<!-- Button -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" name="submit" >Submit <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+  <script>
+    AOS.init();
+    $('#operations2 .card').on('click', function() {
+      swal('Success!', 'You have successfully joined operation!', 'success');
+    });
+  </script>
+</body>
+</html>
+
+

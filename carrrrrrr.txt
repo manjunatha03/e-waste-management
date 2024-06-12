@@ -1,0 +1,283 @@
+duration
+book status
+phone number'password1'
+
+
+
+
+
+create database car3;
+use car3;
+CREATE TABLE admin (
+  ADMIN_ID varchar(255) NOT NULL,
+  ADMIN_PASSWORD varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+CREATE TABLE booking (
+  BOOK_ID int(11) NOT NULL,
+  CAR_ID int(11) NOT NULL,
+  EMAIL varchar(255) NOT NULL,
+  BOOK_PLACE varchar(255) NOT NULL,
+  BOOK_DATE date NOT NULL,
+  DURATION int(11) NOT NULL,
+  PHONE_NUMBER bigint(20) NOT NULL,
+  DESTINATION varchar(255) NOT NULL,
+  RETURN_DATE date NOT NULL,
+  PRICE int(11) NOT NULL,
+  BOOK_STATUS varchar(255) NOT NULL DEFAULT 'UNDER PROCESSING'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+CREATE TABLE cars (
+  CAR_ID int(11) NOT NULL,
+  CAR_NAME varchar(255) NOT NULL,
+  FUEL_TYPE varchar(255) NOT NULL,
+  CAPACITY int(11) NOT NULL,
+  PRICE int(11) NOT NULL,
+  CAR_IMG varchar(255) NOT NULL,
+  AVAILABLE varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+CREATE TABLE feedback (
+  FED_ID int(11) NOT NULL,
+  EMAIL varchar(255) NOT NULL,
+  COMMENT text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+CREATE TABLE payment (
+  PAY_ID int(11) NOT NULL,
+  BOOK_ID int(11) NOT NULL,
+  CARD_NO varchar(255) NOT NULL,
+  EXP_DATE varchar(255) NOT NULL,
+  CVV int(11) NOT NULL,
+  PRICE int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+CREATE TABLE users (
+  FNAME varchar(255) NOT NULL,
+  LNAME varchar(255) NOT NULL,
+  EMAIL varchar(255) NOT NULL,
+  LIC_NUM varchar(255) NOT NULL,
+  PHONE_NUMBER bigint(11) NOT NULL,
+  PASSWORD varchar(255) NOT NULL,
+  GENDER varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+
+ALTER TABLE admin
+  ADD PRIMARY KEY (ADMIN_ID);
+
+ALTER TABLE booking
+  ADD PRIMARY KEY (BOOK_ID),
+  ADD KEY CAR_ID (CAR_ID),
+  ADD KEY EMAIL (EMAIL);
+
+ALTER TABLE cars
+  ADD PRIMARY KEY (CAR_ID);
+
+ALTER TABLE feedback
+  ADD PRIMARY KEY (FED_ID),
+  ADD KEY TEST (EMAIL);
+
+ALTER TABLE payment
+  ADD PRIMARY KEY (PAY_ID),
+  ADD UNIQUE KEY BOOK_ID (BOOK_ID);
+
+ALTER TABLE users
+  ADD PRIMARY KEY (EMAIL);
+
+ALTER TABLE booking
+  MODIFY BOOK_ID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+
+ALTER TABLE cars
+  MODIFY CAR_ID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  
+ALTER TABLE feedback
+  MODIFY FED_ID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  
+  ALTER TABLE `payment`
+  MODIFY `PAY_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  
+ 
+
+  -- Insert values into the "admin" table
+INSERT INTO admin (ADMIN_ID, ADMIN_PASSWORD)
+VALUES
+  ('admin1', 'password1'),
+  ('admin2', 'password2'),
+  ('admin3', 'password3'),
+  ('admin4', 'password4'),
+  ('admin5', 'password5'),
+  ('admin6', 'password6'),
+  ('admin7', 'password7');
+  
+  INSERT INTO cars (CAR_ID,CAR_NAME, FUEL_TYPE, CAPACITY, PRICE, CAR_IMG, AVAILABLE)
+VALUES
+  (1,'Car1', 'Gasoline', 5, 50, 'car1.jpg', 'Available'),
+  (2,'Car2', 'Electric', 4, 60, 'car2.jpg', 'Available'),
+  (3,'Car3', 'Diesel', 7, 70, 'car3.jpg', 'Not Available'),
+  (4,'Car4', 'Gasoline', 5, 55, 'car4.jpg', 'Available'),
+  (5,'Car5', 'Electric', 4, 65, 'car5.jpg', 'Available'),
+  (6,'Car6', 'Diesel', 7, 75, 'car6.jpg', 'Not Available'),
+  (7,'Car7', 'Gasoline', 5, 58, 'car7.jpg', 'Available');
+
+-- Insert values into the "booking" table
+INSERT INTO booking (BOOK_ID,CAR_ID, EMAIL, BOOK_PLACE, BOOK_DATE, DURATION, PHONE_NUMBER, DESTINATION, RETURN_DATE, PRICE, BOOK_STATUS)
+VALUES
+  (1,1, 'user1@example.com', 'Location1', '2023-11-07', 5, 1234567890, 'Destination1', '2023-11-12', 100, 'UNDER PROCESSING'),
+  (2,2, 'user2@example.com', 'Location2', '2023-11-08', 3, 9876543210, 'Destination2', '2023-11-11', 80, 'APPROVED'),
+  (3,3, 'user3@example.com', 'Location3', '2023-11-09', 7, 5555555555, 'Destination3', '2023-11-16', 120, 'UNDER PROCESSING'),
+  (4,4, 'user4@example.com', 'Location4', '2023-11-10', 2, 7777777777, 'Destination4', '2023-11-12', 60, 'REJECTED'),
+  (5,5, 'user5@example.com', 'Location5', '2023-11-11', 4, 6666666666, 'Destination5', '2023-11-15', 90, 'UNDER PROCESSING'),
+  (6,6, 'user6@example.com', 'Location6', '2023-11-12', 6, 4444444444, 'Destination6', '2023-11-18', 150, 'APPROVED'),
+  (7,7, 'user7@example.com', 'Location7', '2023-11-13', 5, 2222222222, 'Destination7', '2023-11-18', 130, 'UNDER PROCESSING');
+
+-- Insert values into the "cars" table
+
+
+-- Insert values into the "feedback" table
+INSERT INTO feedback (EMAIL, COMMENT)
+VALUES
+  ('user1@example.com', 'Feedback comment 1'),
+  ('user2@example.com', 'Feedback comment 2'),
+  ('user3@example.com', 'Feedback comment 3'),
+  ('user4@example.com', 'Feedback comment 4'),
+  ('user5@example.com', 'Feedback comment 5'),
+  ('user6@example.com', 'Feedback comment 6'),
+  ('user7@example.com', 'Feedback comment 7');
+
+-- Insert values into the "payment" table
+INSERT INTO payment (PAY_ID, BOOK_ID, CARD_NO, EXP_DATE, CVV, PRICE)
+VALUES
+  (1, 1, '1234-5678-9012-3456', '12/25', 123, 100),
+  (2, 2, '9876-5432-1098-7654', '06/24', 456, 80),
+  (3, 3, '5555-5555-5555-5555', '09/26', 789, 120),
+  (4, 4, '7777-7777-7777-7777', '03/23', 234, 60),
+  (5, 5, '6666-6666-6666-6666', '05/25', 567, 90),
+  (6, 6, '4444-4444-4444-4444', '08/27', 901, 150),
+  (7, 7, '2222-2222-2222-2222', '07/24', 345, 130);
+
+-- Insert values into the "users" table
+INSERT INTO users (FNAME, LNAME, EMAIL, LIC_NUM, PHONE_NUMBER, PASSWORD, GENDER)
+VALUES
+  ('User1', 'Lastname1', 'user1@example.com', 'ABCD1234', 1234567890, 'password1', 'Male'),
+  ('User2', 'Lastname2', 'user2@example.com', 'EFGH5678', 9876543210, 'password2', 'Female'),
+  ('User3', 'Lastname3', 'user3@example.com', 'IJKL9101', 5555555555, 'password3', 'Male'),
+  ('User4', 'Lastname4', 'user4@example.com', 'MNOP2345', 7777777777, 'password4', 'Female'),
+  ('User5', 'Lastname5', 'user5@example.com', 'QRST6789', 6666666666, 'password5', 'Male'),
+  ('User6', 'Lastname6', 'user6@example.com', 'UVWX1234', 4444444444, 'password6', 'Female'),
+  ('User7', 'Lastname7', 'user7@example.com', 'YZAB5678', 2222222222, 'password7', 'Male');
+  -- simpel queries
+  -- Retrieve a list of cars that are currently available
+SELECT * FROM cars WHERE AVAILABLE = 'Available';
+-- Retrieve all feedback comments and their corresponding users' email addresses
+SELECT EMAIL, COMMENT FROM feedback;
+-- Retrieve user information for users with 'Male' gender
+SELECT * FROM users WHERE GENDER = 'Male';
+-- Retrieve a list of cars that are currently available:
+SELECT * FROM cars WHERE AVAILABLE = 'Available';
+-- Retrieve all bookings with their status as 'APPROVED':
+SELECT * FROM booking WHERE BOOK_STATUS = 'APPROVED';
+-- nested queries
+-- Retrieve the total number of bookings made by users with 'Male' gender:
+SELECT COUNT(*)
+FROM booking
+WHERE EMAIL IN (
+    SELECT EMAIL
+    FROM users
+    WHERE GENDER = 'Male'
+);
+-- Retrieve the car names for bookings with 'UNDER PROCESSING' status:
+SELECT CAR_NAME
+FROM cars
+WHERE CAR_ID IN (
+    SELECT CAR_ID
+    FROM booking
+    WHERE BOOK_STATUS = 'UNDER PROCESSING'
+);
+-- Retrieve the email addresses of users who have made bookings for cars with 'Gasoline' fuel type:
+SELECT DISTINCT EMAIL
+FROM booking
+WHERE CAR_ID IN (
+    SELECT CAR_ID
+    FROM cars
+    WHERE FUEL_TYPE = 'Gasoline'
+);
+-- Retrieve the booking status for the bookings with the lowest price:
+SELECT DISTINCT BOOK_STATUS
+FROM booking
+WHERE PRICE = (
+    SELECT MIN(PRICE)
+    FROM booking
+);
+
+
+-- Retrieve the email addresses of users who provided feedback and also made bookings with 'APPROVED' status:
+SELECT DISTINCT f.EMAIL
+FROM feedback f
+WHERE f.EMAIL IN (
+    SELECT b.EMAIL
+    FROM booking b
+    WHERE b.BOOK_STATUS = 'APPROVED'
+);
+-- between command
+-- Retrieve cars with capacities between 4 and 6 passengers:
+SELECT *
+FROM cars
+WHERE CAPACITY BETWEEN 4 AND 6;
+-- Retrieve bookings with prices between $80 and $120:
+SELECT *
+FROM booking
+WHERE PRICE BETWEEN 80 AND 120;
+-- group by
+-- Count the number of bookings made by each user:
+SELECT EMAIL, COUNT(*) AS BookingCount
+FROM booking
+GROUP BY EMAIL;
+-- Find the average duration of bookings for each car:
+SELECT CAR_ID, AVG(DURATION) AS AverageDuration
+FROM booking
+GROUP BY CAR_ID;
+-- having command
+-- Find the total price of bookings for each user and retrieve only those with a total price greater than 200:
+SELECT EMAIL, SUM(PRICE) AS TotalPrice
+FROM booking
+GROUP BY EMAIL
+HAVING TotalPrice > 200;
+-- Count the number of bookings in each status category and retrieve only those with more than 3 bookings:
+SELECT BOOK_STATUS, COUNT(*) AS StatusCount
+FROM booking
+GROUP BY BOOK_STATUS
+HAVING StatusCount > 3;
+-- set operations
+-- Retrieve unique email addresses from users and feedback tables
+SELECT EMAIL FROM users
+UNION
+SELECT EMAIL FROM feedback;
+-- Retrieve all email addresses from users and feedback tables (including duplicates)
+SELECT EMAIL FROM users
+UNION ALL
+SELECT EMAIL FROM feedback;
+
+   ALTER TABLE `booking`
+  ADD CONSTRAINT `booking_ibfk_1` FOREIGN KEY (`CAR_ID`) REFERENCES `cars` (`CAR_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `booking_ibfk_2` FOREIGN KEY (`EMAIL`) REFERENCES `users` (`EMAIL`) ON DELETE CASCADE ON UPDATE CASCADE;
+  
+ ALTER TABLE `feedback`
+  ADD CONSTRAINT `TEST` FOREIGN KEY (`EMAIL`) REFERENCES `users` (`EMAIL`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ ALTER TABLE `payment`
+  ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`BOOK_ID`) REFERENCES `booking` (`BOOK_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT; 
+ select * from admin;
+ select * from cars;
+ select * from users;
+ select * from booking;
+select * from feedback;
+select * from payment;

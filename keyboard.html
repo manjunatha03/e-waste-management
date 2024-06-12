@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/form.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Keyboard Disposal</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,500|Barlow+Condensed:400,500|Barlow+Semi+Condensed:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="color.processed.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  
+<style>
+    body {
+      font-family: 'Barlow', sans-serif;
+      background-image: linear-gradient(to right,rgb(0, 253, 148), rgba(34, 136, 9, 0.836));
+    }
+    .navbar {
+      background-color: rgba(255, 255, 255, 1) !important;
+      border-bottom: 3px solid #ed7600;
+    }
+  </style>
+</head>
+ 
+  <body id="scrollTop">
+   
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+    
+      <!-- Hero head: will stick at the top -->
+      
+              <a href="index1.php" class="navbar-item grey is-size-3">
+                <strong>E_PARISARAA</strong>
+              </a>
+              
+            </div>
+            
+                <a href="laptop.html" class="navbar-item">LAPTOP</a>
+                <a href="mobile.html" class="navbar-item">MOBILE</a>
+                <a href="camera.html" class="navbar-item">CAMERA</a>
+                <a href="keyboard.html" class="navbar-item">KEYBOARD</a>
+                <a href="pc.html" class="navbar-item">PC</a>
+                <a href="other.html" class="navbar-item">OTHER</a>
+               
+
+            </div>
+            <div class="navbar-end">
+              <a href="schedule.php" class="navbar-item orange">schedule appointment </a></li>
+                
+              </div>
+
+            </nav>
+          </div>
+   
+            
+        
+      
+    
+  <section id="laptop" class="hero is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <div data-aos="fade-right"><i class="fa fa-keyboard fa-5x"></i></div>
+          <br>
+        <h1 class="title red is-spaced is-size-2">
+          Keyboard Disposal
+        </h1>
+        <h2 class="subtitle">
+          Enter the details below pertaining to your keyboard.
+        </h2>
+        <br>
+        <div class="container">
+
+    <form class="well form-horizontal" action="insertkeyboard.php" method="post"  id="">
+<fieldset>
+
+<!-- Form Name -->
+<legend></legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">EMAIL</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+  <input name="email" placeholder="enter your email" class="form-control" type="text" required>
+    </div>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label">KEYBOARD TYPE</label>  
+  <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="k_type" class="form-control selectpicker" required>
+      <option value=" " ></option>
+      <option>Mechanical Keyboard</option>
+      <option>Membrane Keyboard</option>
+      <option>Flexible Keyboard</option>
+      <option>Ergonomic Keyboard</option>
+      <option>Gaming Keyboard</option>
+      <option>Wireless keyboard</option>
+      <option>Multimedia Keyboard</option>
+      <option>Handheld Keyboard</option>
+      <option>Verticle Keyboard</option>
+      <option>Projection keyboard</option>
+      
+      </select>
+  </div>
+</div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">COMPANY NAME</label>  
+  <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="k_companyname" class="form-control selectpicker" required>
+      <option value=" " ></option>
+      <option>A4Tech</option>
+      <option>Acer</option>
+      <option>Alienware</option>
+      <option>AOPEN</option>
+      <option>Antec</option>
+      <option>BenQ</option>
+      <option>BIOSTAR</option>
+      <option>BTC</option>
+      <option>Chicony</option>
+      <option>Cooler Master</option>
+      <option>Corsair</option>
+      <option>Creative Technology</option>
+      <option>CyberPowerPC</option>
+      <option>Dell</option>
+      <option>Evercool</option>
+      <option>EVGA</option>
+      <option>G.SKILL</option>
+      <option>Genius</option>
+      <option>GIGABYTE</option>
+      <option>IOGEAR</option>
+      <option>I/O Magic</option>
+      <option>Kensington</option>
+      <option>Kingston</option>
+      <option>Kodak</option>
+      <option>Lenovo</option>
+      <option>Lian Li</option>
+      <option>Logitech</option>
+      <option>Mad Catz</option>
+      <option>Mecer</option>
+      <option>Memorex</option>
+      <option>Microsoft</option>
+      <option>MSI</option>
+      <option>NMB</option>
+      <option>Philips</option>
+      <option>Primax</option>
+      <option>Razer</option>
+      <option>Roccat</option>
+      <option>Rosewell</option>
+      <option>SIIG</option>
+      <option>SteelSeries</option>
+      <option>Sunbeam</option>
+      <option>Targus</option>
+      </select>
+  </div>
+</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >BRAND NAME</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+  <input name="k_brand" placeholder="enter brand name(eg. Cosmic Byte CB-GK-14)" class="form-control"  type="text" required>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">MECHANICAL SWITCH</label>  
+  <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="k_switch" class="form-control selectpicker" required>
+      <option value=" " ></option>
+      <option>Cherry MX</option>
+      <option>MX blue</option>
+      <option>MX browns</option>
+      
+      </select>
+  </div>
+</div>
+</div>  
+
+
+<!-- Text input-->
+ <div class="form-group">
+  <label class="col-md-4 control-label">USB PORT TYPE</label>  
+  <div class="col-md-4 selectContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+    <select name="k_port" class="form-control selectpicker" required>
+      <option value=" " ></option>
+      <option>A type</option>
+      <option>C type</option>
+      
+      </select>
+  </div>
+</div>
+</div>  
+
+
+
+
+
+
+<!-- radio checks -->
+ <div class="form-group">
+                        <label class="col-md-4 control-label">Does the keyboard work?</label>
+                        <div class="col-md-4">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="k_work" value="yes" required> Yes
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="k_work" value="no" required> No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Text area -->
+  
+<div class="form-group">
+  <label class="col-md-4 control-label">OTHER SPECIFICATIONS</label>
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
+          <textarea class="form-control" name="k_specs" placeholder="Specify here.."></textarea>
+  </div>
+  </div>
+</div>
+
+<!-- Success message -->
+<!--<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
+
+<!-- Button -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+    <button type="submit" name="submit" >Submit <span class="glyphicon glyphicon-send"></span></button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div>
+</div>
+</div>
+</section>
+
+  <script>
+    AOS.init();
+    $('#operations2 .card').on('click', function() {
+      swal('Success!', 'You have successfully joined operation!', 'success');
+    });
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,77 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+    text-decoration: none;
+}
+body{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-image: url('elec.jpg');
+        background-size: cover;
+        transform: translate(-50%, -50%);
+      }
+
+div.login_form{
+    width: 600px;
+    background-color: #f2f4ff;
+    box-shadow: 0px 5px 10px black;
+}
+h2{
+    text-align: center;
+    background-color: #16a509;
+    padding: 12px 0px;
+    color: white;
+}
+div.login_form form{
+    padding: 30px 60px;
+
+}
+div.login_form form input{
+    margin: 0px 0px 10px 0px;
+  }
+div.login_form form input-field{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+
+}
+div.login_form form div.input-field i{
+    color: rgb(8, 99, 99);
+    padding: 10px 14px;
+    background-color: #f2f4f6;
+    margin-right: 4px;
+}
+div.login_form form div.input-field input{
+    background-color: #f2f4f6;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+}
+div.login_form button{
+    width: 50%;
+    background-color: #0e4403;
+    padding: 8px;
+    border: none;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    margin:25px 0;
+    transition: background-color 0.4s;
+}
+div.login_form button:hover{
+    background-color: #03af76;
+}
+div.login_form form div.extra{
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+div.login_form form div.extra a{
+    color: darkgrey;
+}
